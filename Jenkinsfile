@@ -15,6 +15,10 @@ pipeline {
     stage('Test') {
       steps {
         echo 'This is only a test!'
+        timeout(time: 30) {
+          echo 'Quick'
+        }
+
       }
     }
   }
